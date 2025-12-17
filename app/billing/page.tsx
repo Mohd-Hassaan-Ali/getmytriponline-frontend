@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+
+export const dynamic = 'force-dynamic';
 import { Plus, CreditCard, FileText, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -14,6 +16,14 @@ import DashboardLayout from '@/components/layout/DashboardLayout';
 
 export default function BillingPage() {
   const { organization } = useOrganization();
+  
+  if (!organization) {
+    return (
+      <DashboardLayout>
+        <div className="p-6">Loading...</div>
+      </DashboardLayout>
+    );
+  }
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
   const [isLoading, setIsLoading] = useState(true);
