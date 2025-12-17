@@ -23,7 +23,7 @@ export async function signToken(payload: Omit<JWTPayload, 'exp'>): Promise<strin
 export async function verifyToken(token: string): Promise<JWTPayload> {
   try {
     const { payload } = await jwtVerify(token, secret);
-    return payload as JWTPayload;
+    return payload as unknown as JWTPayload;
   } catch (error) {
     throw new Error('Invalid token');
   }
