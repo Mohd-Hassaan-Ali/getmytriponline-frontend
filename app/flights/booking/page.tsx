@@ -226,7 +226,7 @@ export default function BookingPage() {
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="block text-sm mb-1">Title *</label>
-                          <select value={passenger.Title} onChange={(e) => { updatePassenger(index, 'Title', e.target.value); updatePassenger(index, 'Gender', e.target.value === 'Mr' ? '1' : '2'); }} className="w-full px-3 py-2 border rounded" required>
+                          <select value={passenger.Title} onChange={(e) => { updatePassenger(index, 'Title', e.target.value); updatePassenger(index, 'Gender', e.target.value === 'Mr' || e.target.value === 'Mstr' ? '1' : '2'); }} className="w-full px-3 py-2 border rounded" required>
                             <option value="Mr">Mr</option>
                             <option value="Ms">Ms</option>
                             <option value="Mrs">Mrs</option>
