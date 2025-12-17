@@ -132,7 +132,7 @@ export function OrganizationProvider({ children }: OrganizationProviderProps) {
     const permission = Object.values(PERMISSIONS).find(p => p.id === permissionId);
     if (!permission) return false;
     
-    return checkPermission(user.role, permission);
+    return checkPermission(user.role, permission as any);
   };
 
   const isAdmin = user?.role === UserRole.SUPER_ADMIN || user?.role === UserRole.ORG_ADMIN;
