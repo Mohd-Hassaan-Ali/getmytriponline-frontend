@@ -3,35 +3,35 @@ import { UserRole, Permission, RolePermission } from '@/types/auth';
 // Define all permissions
 export const PERMISSIONS = {
   // Organization Management
-  ORG_READ: { id: 'org_read', name: 'Read Organization', resource: 'organization', action: 'read' },
-  ORG_UPDATE: { id: 'org_update', name: 'Update Organization', resource: 'organization', action: 'update' },
-  ORG_DELETE: { id: 'org_delete', name: 'Delete Organization', resource: 'organization', action: 'delete' },
+  ORG_READ: { id: 'org_read', name: 'Read Organization', description: 'View organization details', resource: 'organization', action: 'read' },
+  ORG_UPDATE: { id: 'org_update', name: 'Update Organization', description: 'Modify organization settings', resource: 'organization', action: 'update' },
+  ORG_DELETE: { id: 'org_delete', name: 'Delete Organization', description: 'Delete organization', resource: 'organization', action: 'delete' },
   
   // User Management
-  USER_READ: { id: 'user_read', name: 'Read Users', resource: 'user', action: 'read' },
-  USER_CREATE: { id: 'user_create', name: 'Create Users', resource: 'user', action: 'create' },
-  USER_UPDATE: { id: 'user_update', name: 'Update Users', resource: 'user', action: 'update' },
-  USER_DELETE: { id: 'user_delete', name: 'Delete Users', resource: 'user', action: 'delete' },
+  USER_READ: { id: 'user_read', name: 'Read Users', description: 'View user information', resource: 'user', action: 'read' },
+  USER_CREATE: { id: 'user_create', name: 'Create Users', description: 'Add new users', resource: 'user', action: 'create' },
+  USER_UPDATE: { id: 'user_update', name: 'Update Users', description: 'Modify user details', resource: 'user', action: 'update' },
+  USER_DELETE: { id: 'user_delete', name: 'Delete Users', description: 'Remove users', resource: 'user', action: 'delete' },
   
   // Booking Management
-  BOOKING_READ: { id: 'booking_read', name: 'Read Bookings', resource: 'booking', action: 'read' },
-  BOOKING_CREATE: { id: 'booking_create', name: 'Create Bookings', resource: 'booking', action: 'create' },
-  BOOKING_UPDATE: { id: 'booking_update', name: 'Update Bookings', resource: 'booking', action: 'update' },
-  BOOKING_DELETE: { id: 'booking_delete', name: 'Delete Bookings', resource: 'booking', action: 'delete' },
-  BOOKING_APPROVE: { id: 'booking_approve', name: 'Approve Bookings', resource: 'booking', action: 'approve' },
+  BOOKING_READ: { id: 'booking_read', name: 'Read Bookings', description: 'View bookings', resource: 'booking', action: 'read' },
+  BOOKING_CREATE: { id: 'booking_create', name: 'Create Bookings', description: 'Make new bookings', resource: 'booking', action: 'create' },
+  BOOKING_UPDATE: { id: 'booking_update', name: 'Update Bookings', description: 'Modify bookings', resource: 'booking', action: 'update' },
+  BOOKING_DELETE: { id: 'booking_delete', name: 'Delete Bookings', description: 'Cancel bookings', resource: 'booking', action: 'delete' },
+  BOOKING_APPROVE: { id: 'booking_approve', name: 'Approve Bookings', description: 'Approve booking requests', resource: 'booking', action: 'approve' },
   
   // Financial
-  FINANCE_READ: { id: 'finance_read', name: 'Read Financial Data', resource: 'finance', action: 'read' },
-  FINANCE_EXPORT: { id: 'finance_export', name: 'Export Financial Data', resource: 'finance', action: 'export' },
+  FINANCE_READ: { id: 'finance_read', name: 'Read Financial Data', description: 'View financial reports', resource: 'finance', action: 'read' },
+  FINANCE_EXPORT: { id: 'finance_export', name: 'Export Financial Data', description: 'Export financial data', resource: 'finance', action: 'export' },
   
   // Reports
-  REPORT_READ: { id: 'report_read', name: 'Read Reports', resource: 'report', action: 'read' },
-  REPORT_CREATE: { id: 'report_create', name: 'Create Reports', resource: 'report', action: 'create' },
-  REPORT_EXPORT: { id: 'report_export', name: 'Export Reports', resource: 'report', action: 'export' },
+  REPORT_READ: { id: 'report_read', name: 'Read Reports', description: 'View reports', resource: 'report', action: 'read' },
+  REPORT_CREATE: { id: 'report_create', name: 'Create Reports', description: 'Generate reports', resource: 'report', action: 'create' },
+  REPORT_EXPORT: { id: 'report_export', name: 'Export Reports', description: 'Export reports', resource: 'report', action: 'export' },
   
   // Settings
-  SETTINGS_READ: { id: 'settings_read', name: 'Read Settings', resource: 'settings', action: 'read' },
-  SETTINGS_UPDATE: { id: 'settings_update', name: 'Update Settings', resource: 'settings', action: 'update' },
+  SETTINGS_READ: { id: 'settings_read', name: 'Read Settings', description: 'View settings', resource: 'settings', action: 'read' },
+  SETTINGS_UPDATE: { id: 'settings_update', name: 'Update Settings', description: 'Modify settings', resource: 'settings', action: 'update' },
 } as const;
 
 // Role-based permissions mapping
