@@ -3,6 +3,12 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { Button } from '@/components/ui/button';
 
+declare global {
+  interface Window {
+    Sentry?: any;
+  }
+}
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
